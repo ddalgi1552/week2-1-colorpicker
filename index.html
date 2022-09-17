@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1{color: black;}
+    #m1{font-size: 30px; color: rgb(255, 255, 255);}
+    #m2{font-size: 30px; color: rgb(255, 255, 255);}
+    #m3{font-size: 30px; color: rgb(255, 255, 255);}
+    body{margin:0;}
+    #container{display: flex;}
+    .half{width: 50vw; background: yellow;}
+    .third{height: 50vh; background: blue;}
+    img{width: 30px;}
+
+    .colorBox{width: 500px;
+      margin: 0px auto;
+      border: solid 3px black;
+      text-align: center;
+    }
+  </style>
+
+
+</head>
+
+
+
+<body>
+  <div class="colorBox">
+  <h1>COLOR MAKER!</h1>
+  <p>pick the same color</p>
+   <img src="https://t3.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/A1Z/image/bzgoN6l8O_psZvwN1Lr03Gl3_2A.jpg" alt="blue">
+   <img src="https://t2.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/A1Z/image/bWHOPOpz2bFCa3mDl9YE_OMOl0Y.jpg" alt="skyblue">
+   <img src="https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/A1Z/image/GBanUspnmtBjqFzTgIwWlM-_t-M.jpg" alt="violet">
+  </div>
+  <br>
+  <div id="container">
+    <div class="half" id="w1">
+      <div id="m1"></div>
+      <input type="color" id="c1">
+    </div>
+    <div class="half"> 
+      <div class="third" id="w2">
+        <div id="m2"></div>
+        <input type="color" id="c2">
+      </div>
+      <div class="third" id="w3">
+        <div id="m3"></div>
+        <input type="color" id="c3">
+      </div>
+    </div>
+  </div>
+  <script>
+
+    c1.oninput=function(){
+      w1.style.background=c1.value;
+      m1.innerHTML=c1.value;
+    }
+
+    c2.oninput=function(){
+      w2.style.background=c2.value;
+      m2.innerHTML=c2.value;
+    }
+
+    c3.oninput=function(){
+      w3.style.background=c3.value;
+      m3.innerHTML=c3.value;
+    }
+
+
+
+
+  </script>
+</body>
+</html>
